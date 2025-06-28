@@ -24,3 +24,29 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Responsividade adicional */
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .carousel .card {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
