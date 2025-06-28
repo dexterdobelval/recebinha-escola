@@ -15,43 +15,63 @@ function Home() {
   }, [])
 
   return (
-    <div className="row">
-      <div className="col-12 col-md-10 col-lg-8 mx-auto text-center px-3">
-        <div className="d-flex flex-column flex-sm-row align-items-center justify-content-center mb-4">
-          <img src="/image.png" alt="EcoColeta" style={{maxWidth: '80px', height: 'auto'}} className="me-sm-3 mb-2 mb-sm-0" />
-          <h1 className="display-5 display-md-4 text-success mb-0">VerDenovo</h1>
+    <div className="d-flex">
+      {/* Navbar lateral */}
+      <div className="bg-success text-white p-3" style={{minHeight: '100vh', width: '250px'}}>
+        <div className="text-center mb-4">
+          <img src="/image.png" alt="VerDenovo" style={{maxWidth: '50px', height: 'auto'}} className="mb-2" />
+          <h5 className="text-white">VerDenovo</h5>
         </div>
+        
+        <nav className="nav flex-column">
+          <Link to="/" className="nav-link text-white mb-2 p-2 rounded" style={{backgroundColor: 'rgba(255,255,255,0.1)'}}>
+            🏠 Início
+          </Link>
+          <Link to="/pontos" className="nav-link text-white mb-2 p-2 rounded hover-bg">
+            🗺️ Pontos de Coleta
+          </Link>
+          <Link to="/cadastrar" className="nav-link text-white mb-2 p-2 rounded hover-bg">
+            ➕ Cadastrar
+          </Link>
+          <Link to="/login" className="nav-link text-white mb-2 p-2 rounded hover-bg">
+            🔑 Login
+          </Link>
+        </nav>
+      </div>
 
-        <p className="lead px-2">Encontre pontos de coleta de reciclagem próximos a você e contribua para um mundo mais sustentável.</p>
-        <div className="mt-4 d-flex flex-column flex-sm-row gap-2 justify-content-center">
-          <Link to="/pontos" className="btn btn-success btn-lg">Ver Pontos de Coleta</Link>
-          <Link to="/cadastrar" className="btn btn-outline-success btn-lg">Cadastrar</Link>
-        </div>
-
-        <div className="mt-4 mt-md-5">
+      {/* Conteúdo principal */}
+      <div className="flex-grow-1">
+        {/* Carrossel no topo ocupando 100% */}
+        <div className="w-100 mb-4">
           <div id="carouselPromocoes" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <div className="card bg-success text-white mx-2">
-                  <div className="card-body text-center p-3 p-md-4">
-                    <h5 className="card-title h6 h-md-5">🤝 Parceria EcoTech Solutions</h5>
-                    <p className="card-text small">Empresa líder em sustentabilidade se junta ao VerDenovo para ampliar a rede de coleta seletiva.</p>
+                <div className="card bg-success text-white rounded-0" style={{minHeight: '200px'}}>
+                  <div className="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <div>
+                      <h5 className="card-title h4">🤝 Parceria EcoTech Solutions</h5>
+                      <p className="card-text">Empresa líder em sustentabilidade se junta ao VerDenovo para ampliar a rede de coleta seletiva.</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="carousel-item">
-                <div className="card mx-2" style={{backgroundColor: '#198754'}}>
-                  <div className="card-body text-center text-white p-3 p-md-4">
-                    <h5 className="card-title h6 h-md-5">🌍 Semana do Meio Ambiente</h5>
-                    <p className="card-text small">De 5 a 12 de junho - Eventos especiais de reciclagem em todos os pontos de coleta parceiros.</p>
+                <div className="card rounded-0" style={{backgroundColor: '#198754', minHeight: '200px'}}>
+                  <div className="card-body d-flex align-items-center justify-content-center text-center text-white p-4">
+                    <div>
+                      <h5 className="card-title h4">🌍 Semana do Meio Ambiente</h5>
+                      <p className="card-text">De 5 a 12 de junho - Eventos especiais de reciclagem em todos os pontos de coleta parceiros.</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="carousel-item">
-                <div className="card mx-2" style={{backgroundColor: '#198754'}}>
-                  <div className="card-body text-center text-white p-3 p-md-4">
-                    <h5 className="card-title h6 h-md-5">♻️ Campanha Recicle+</h5>
-                    <p className="card-text small">Troque seus recicláveis por descontos em lojas parceiras. Participe e ganhe prêmios!</p>
+                <div className="card rounded-0" style={{backgroundColor: '#198754', minHeight: '200px'}}>
+                  <div className="card-body d-flex align-items-center justify-content-center text-center text-white p-4">
+                    <div>
+                      <h5 className="card-title h4">♻️ Campanha Recicle+</h5>
+                      <p className="card-text">Troque seus recicláveis por descontos em lojas parceiras. Participe e ganhe prêmios!</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -62,6 +82,21 @@ function Home() {
             <button className="carousel-control-next" type="button" data-bs-target="#carouselPromocoes" data-bs-slide="next">
               <span className="carousel-control-next-icon"></span>
             </button>
+          </div>
+        </div>
+
+        {/* Conteúdo em caixas */}
+        <div className="container-fluid px-4">
+          <div className="row g-4">
+            <div className="col-12">
+              <div className="card" style={{backgroundColor: 'rgba(232, 245, 232, 0.8)', border: 'none'}}>
+                <div className="card-body text-center p-4">
+                  <img src="/image.png" alt="VerDenovo" style={{maxWidth: '80px', height: 'auto'}} className="mb-3" />
+                  <h5 className="card-title text-success mb-3">Sobre o VerDenovo</h5>
+                  <p className="card-text lead">Encontre pontos de coleta de reciclagem próximos a você e contribua para um mundo mais sustentável. Nossa plataforma conecta pessoas conscientes com locais de descarte adequado, promovendo a economia circular e a preservação do meio ambiente.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
