@@ -1,6 +1,6 @@
-# EcoColeta - Pontos de Coleta de Reciclagem
+# VerDenovo - Pontos de Coleta de Reciclagem
 
-Site simples para gerenciar pontos de coleta de reciclagem.
+Site completo para gerenciar pontos de coleta de reciclagem com sistema de login e perfis.
 
 ## Tecnologias Utilizadas
 
@@ -10,29 +10,14 @@ Site simples para gerenciar pontos de coleta de reciclagem.
 - **React Hook Form** - Formulários
 - **Axios** - Requisições HTTP
 
-## Estrutura do Projeto
-
-```
-src/
-├── components/
-│   └── Navbar.jsx          # Barra de navegação
-├── pages/
-│   ├── Home.jsx            # Página inicial
-│   ├── PontosColeta.jsx    # Lista de pontos
-│   └── CadastrarPonto.jsx  # Formulário de cadastro
-├── services/
-│   └── api.js              # Serviços de API
-└── App.jsx                 # Componente principal
-```
-
 ## Funcionalidades
 
-- ✅ Página inicial com apresentação
+- ✅ Página inicial com carrossel de promoções
+- ✅ Sistema de login (Empresa/Ponto de Coleta)
+- ✅ Cadastro geral (Pontos/Empresas)
+- ✅ Perfis personalizáveis
 - ✅ Listagem de pontos de coleta
-- ✅ Cadastro de novos pontos
-- ✅ Navegação entre páginas
-- ✅ Formulário com validação
-- ✅ Design responsivo com Bootstrap
+- ✅ Design responsivo com tema verde
 
 ## Como Executar
 
@@ -47,10 +32,3 @@ npm run dev
 ```
 
 3. Abrir no navegador: http://localhost:5173
-
-## Próximos Passos
-
-- Integrar com API real
-- Adicionar mapa para localização
-- Implementar busca por localização
-- Adicionar mais campos no cadastro
